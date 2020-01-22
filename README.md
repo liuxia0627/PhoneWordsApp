@@ -34,7 +34,11 @@ Image | IMG |
 ## Installation
 ### Clone
 
-- Clone this repo to your local machine using `https://github.com/liuxia0627/PhoneWordsApp.git`
+- Clone this repo to your local machine using the below command:
+
+```shell
+$ git clone https://github.com/liuxia0627/PhoneWordsApp
+```
 
 ### Build
 
