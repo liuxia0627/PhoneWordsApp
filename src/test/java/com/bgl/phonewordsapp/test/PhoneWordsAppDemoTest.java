@@ -61,6 +61,9 @@ public class PhoneWordsAppDemoTest {
 
         PhoneWordsAppDemo.main(args);
         assertEquals("Matched phone words for phone number 782792771 are: \r\n[STAR-WARS-1]\r\n", outContent.toString());
+
+        Files.delete(dictFile);
+        Files.delete(phoneNumbersFile);
     }
 
 

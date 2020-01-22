@@ -88,6 +88,9 @@ public class PhoneWordsControllerTest {
         //5. Test map value
         assertThat(actual, IsMapContaining.hasValue(wordList1));
         assertThat(actual, IsMapContaining.hasValue(wordList2));
+
+        Files.delete(dictFile);
+        Files.delete(phoneNumbersFile);
     }
 
     @After
