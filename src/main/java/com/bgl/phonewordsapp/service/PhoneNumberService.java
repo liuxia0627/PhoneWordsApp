@@ -7,12 +7,14 @@ package com.bgl.phonewordsapp.service;
  *
  */
 import com.bgl.phonewordsapp.dao.FileDao;
+import com.bgl.phonewordsapp.dao.IFileDao;
+
 import java.util.*;
 
-public class PhoneNumberService {
-    private FileDao fileDao;
+public class PhoneNumberService implements  IPhoneNumberService {
+    private IFileDao fileDao;
 
-    public PhoneNumberService(FileDao fileDao){
+    public PhoneNumberService(IFileDao fileDao){
         this.fileDao = fileDao;
     }
 

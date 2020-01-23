@@ -1,6 +1,8 @@
 package com.bgl.phonewordsapp.service;
 
 import com.bgl.phonewordsapp.dao.FileDao;
+import com.bgl.phonewordsapp.dao.IFileDao;
+
 import java.util.List;
 
 /**
@@ -8,10 +10,10 @@ import java.util.List;
  * @author rogerwill
  *
  */
-public class DictionaryService {
-    private FileDao fileDao;
+public class DictionaryService implements IDictionaryService{
+    private IFileDao fileDao;
 
-    public DictionaryService(FileDao fileDao){
+    public DictionaryService(IFileDao fileDao){
         this.fileDao = fileDao;
     }
 

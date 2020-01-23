@@ -1,8 +1,6 @@
 package com.bgl.phonewordsapp.controller;
 
-import com.bgl.phonewordsapp.service.DictionaryService;
-import com.bgl.phonewordsapp.service.PhoneNumberService;
-import com.bgl.phonewordsapp.service.PhoneWordService;
+import com.bgl.phonewordsapp.service.*;
 
 import java.util.ArrayList;
 import java.util.LinkedHashMap;
@@ -16,11 +14,11 @@ import java.util.Map;
  */
 public class PhoneWordsController {
 
-    private PhoneWordService phoneWordService;
-    private PhoneNumberService phoneNumberService;
-    private DictionaryService dictionaryService;
+    private IPhoneWordService phoneWordService;
+    private IPhoneNumberService phoneNumberService;
+    private IDictionaryService dictionaryService;
 
-    public PhoneWordsController(PhoneWordService phoneWordService, PhoneNumberService phoneNumberService, DictionaryService dictionaryService){
+    public PhoneWordsController(IPhoneWordService phoneWordService, IPhoneNumberService phoneNumberService, IDictionaryService dictionaryService){
         this.phoneWordService = phoneWordService;
         this.phoneNumberService = phoneNumberService;
         this.dictionaryService = dictionaryService;

@@ -12,7 +12,7 @@ import java.util.List;
  * @author rogerwill
  *
  */
-public class FileDao {
+public class FileDao implements IFileDao  {
     /**
      * This method reads each line of the specified file and store them in a list
      * all the punctuation and whitespaces in the lines are ignored while reading

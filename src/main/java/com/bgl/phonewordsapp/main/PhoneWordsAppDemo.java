@@ -2,9 +2,9 @@ package com.bgl.phonewordsapp.main;
 
 import com.bgl.phonewordsapp.controller.PhoneWordsController;
 import com.bgl.phonewordsapp.dao.FileDao;
-import com.bgl.phonewordsapp.service.DictionaryService;
-import com.bgl.phonewordsapp.service.PhoneNumberService;
-import com.bgl.phonewordsapp.service.PhoneWordService;
+import com.bgl.phonewordsapp.dao.IFileDao;
+import com.bgl.phonewordsapp.service.*;
+
 import java.util.*;
 
 /**
@@ -30,10 +30,10 @@ public class PhoneWordsAppDemo {
         String phoneNumFilePath = args[0];
 
         //initialize dao and service layer beans
-        FileDao fileDao = new FileDao();
-        PhoneWordService phoneWordService = new PhoneWordService();
-        PhoneNumberService phoneNumberService = new PhoneNumberService(fileDao);
-        DictionaryService dictionaryService = new DictionaryService(fileDao);
+        IFileDao fileDao = new FileDao();
+        IPhoneWordService phoneWordService = new PhoneWordService();
+        IPhoneNumberService phoneNumberService = new PhoneNumberService(fileDao);
+        IDictionaryService dictionaryService = new DictionaryService(fileDao);
 
         //initialize controller layer by inject day and service layer beans into controller layer
         PhoneWordsController phoneWordsController = new PhoneWordsController(phoneWordService, phoneNumberService, dictionaryService);

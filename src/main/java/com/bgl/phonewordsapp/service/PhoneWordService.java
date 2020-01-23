@@ -10,7 +10,7 @@ import java.util.Map;
  *  * @author rogerwill
  *
  */
-public class PhoneWordService {
+public class PhoneWordService implements IPhoneWordService {
 
     /**
      * This is a recursive method to return list of word combinations from dictionary for phone word encoded by phone number
@@ -50,7 +50,7 @@ public class PhoneWordService {
 
     /**
      * This method prints and phone number and its matched phone words combinations
-     * @param matchedPhoneWordsMap
+     * @param matchedPhoneWordsMap Matched phone words combinations map
      */
     public void printMatchedPhoneWords(Map<String, List<List<String>>> matchedPhoneWordsMap){
         for(Map.Entry<String, List<List<String>>> entry : matchedPhoneWordsMap.entrySet()){
